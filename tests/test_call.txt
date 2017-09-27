@@ -30,4 +30,13 @@
     <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
     <category term="astro-ph" scheme="http://arxiv.org/schemas/atom"/>
   </entry>
+  <entry>
+    <id>http://arxiv.org/isitnotanumberusually</id>
+    <title>Hi there!</title>
+    <summary>In a couple words</summary>
+    <author>
+        <name>Erika Wagoner</name>
+        <arxiv:affiliation>University of Arizona<arxvi:affiliation>
+    </author>
+  </entry>
 </feed>
