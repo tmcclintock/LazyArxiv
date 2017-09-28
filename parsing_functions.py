@@ -68,8 +68,13 @@ def match_keywords(kwlist, article_list):
                 interesting.append(article)
 
     interesting = remove_duplicates(interesting)
-
     return interesting
+
+def write_query(lastdate, currentdate):
+    base = "http://export.arxiv.org/api/query?search_query=%28astro-ph.GA+OR+astro-ph.CO+OR+astro-ph.EP+OR+astro-ph.HE+OR+astro-ph.IM+OR+astro-ph.SR%29+AND+submittedDate:["
+    query = base + lastdate + '0000+TO+' + currentdate + '0000]&max_results=500&sortBy=submittedDate&sortOrder=descending'
+    return query
+
 
 if __name__ == "__main__":
     with open("tests/test_call.txt") as fp:
