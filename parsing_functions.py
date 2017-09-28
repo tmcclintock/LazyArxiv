@@ -7,10 +7,9 @@ class Article():
         pass
 
     def __repr__(self):
-        if len(self.authors) > 1:
-            return """%s\nAuthors: %s et al.\nAbstract: %s\n%s\n""" % (self.title, self.authors, self.abstract, self.link)
-        if len(self.authors) == 1:
-            return """%s\nAuthors: %s\nAbstract: %s\n%s\n""" % (self.title, self.authors, self.abstract, self.link)
+        if len(self.authors) > 1: authors = self.authors #Can do something special here
+        else: authors = self.authors
+        return """Title: %s\nAuthors: %s \nAbstract: %s\n%s\n""" % (self.title, authors, self.abstract, self.link)
 
 def load_title(entry):
     return entry.title.string
