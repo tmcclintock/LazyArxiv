@@ -1,1 +1,3 @@
-Matthew Kirby matthewkirby@email.arizona.edu "clusters" "galaxy clusters" "weak lensing" "DES" "LSST" "redshift-space distortions" 
+Tom McClintock
+tmcclintock89@gmail.com 
+"galaxy clusters" "weak lensing" "DES" "LSST" "DESI" "emulator" "F. Royer"
