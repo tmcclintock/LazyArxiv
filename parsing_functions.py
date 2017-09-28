@@ -75,6 +75,13 @@ def write_query(lastdate, currentdate):
     query = base + lastdate + '0000+TO+' + currentdate + '0000]&max_results=500&sortBy=submittedDate&sortOrder=descending'
     return query
 
+def generate_email_output(alist):
+    email_body = """"""
+    for article in alist:
+        email_body += article.__repr__()
+    return email_body
+        
+
 
 if __name__ == "__main__":
     with open("tests/test_call.txt") as fp:
