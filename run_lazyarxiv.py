@@ -28,10 +28,8 @@ def main():
     # For each user, generate a list of interesting articles
     for user in user_list:
         interesting = pf.match_keywords(user.kwlist, article_list)
-        pf.print_all_articles(interesting)
-
         if len(sys.argv) == 1:
-            print interesting
+            pf.print_all_articles(interesting)
         else:
             email_output = pf.generate_email_output(interesting)
             email.send_email(server, fromaddr, user.email, email_output)
