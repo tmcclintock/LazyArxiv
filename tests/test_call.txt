@@ -24,11 +24,11 @@
   </entry>
   <entry>
     <id>http://arxiv.org/isitnotanumberusually</id>
-    <title>Hi there!</title>
+    <title>Dark Matter Discovered!</title>
     <summary>In a couple words</summary>
     <author>
         <name>Erika Wagoner</name>
-        <arxiv:affiliation>University of Arizona<arxvi:affiliation>
+        <arxiv:affiliation>University of Arizona</arxiv:affiliation>
     </author>
   </entry>
   <entry>
@@ -37,16 +37,25 @@
     <summary>faueshflahek</summary>
     <author>
         <name>Matthew Kirby</name>
-        <arxiv:affiliation>University of Arizona<arxvi:affiliation>
+        <arxiv:affiliation>University of Arizona</arxiv:affiliation>
     </author>
   </entry>
   <entry>
     <id>http://arxiv.org/isitnafefaually</id>
-    <title>Baryon Acoustic Oscilations - test title #4</title>
+    <title>Baryon Acoustic Oscillations - test title #4</title>
     <summary>faefeawfaewfawef</summary>
     <author>
         <name>Tom McClintock</name>
-        <arxiv:affiliation>University of Arizona<arxvi:affiliation>
+        <arxiv:affiliation>University of Arizona</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/isitsfewefefafwefwlly</id>
+    <title>Dark Energy and the Matter Power Spectrum</title>
+    <summary>pppppfeawfaewfawef</summary>
+    <author>
+        <name>Eduardo Rozo</name>
+        <arxiv:affiliation>University of Arizona<.arxiv:affiliation>
     </author>
   </entry>
 </feed>
