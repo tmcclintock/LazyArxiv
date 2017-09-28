@@ -1,12 +1,17 @@
 
 class User():
-    def __init__(self, line):
-        self.fname = line[0]
-        self.lname = line[1]
-        self.email = line[2]
-        self.parse_keywords(line[3:])
+    def __init__(self, lines):
+        print lines
+        self.name  = lines[0]
+        self.email = lines[1]
+        self.parse_keywords(lines[2])
 
-    def parse_keywords(self, kwlist):
+    def parse_keywords(self, kwline):
+        kwlist = kwline.split("\ ")
+        self.kwlist = [kw.strip("\"") for kw in kwlist]
+        return
+    """
+        print kwlist
         self.kwlist = []
         # Gross for loop but it was the first way I could think of doing this
         for i in range(len(kwlist)):
@@ -21,6 +26,7 @@ class User():
                     else:
                         partialkw += kwlist[i]+' '
                 self.kwlist.append(partialkw)
+                """
 
     def check_end__(self, string):
         if string[-1] == '\"':
@@ -29,11 +35,23 @@ class User():
 
 
     def __repr__(self):
-        return '%s %s\n%s\nKeyWords: %s\n' % (self.fname, self.lname, self.email, self.kwlist)
+        return '%s\n%s\nKeyWords: %s\n' % (self.name, self.email, self.kwlist)
 
 def load_all_users(fname="users.txt"):
-    lines = [line.rstrip('\n') for line in open(fname)]
-    user_list = [User(line.split()) for line in lines]
+    user_list = []
+    with open(fname, "r") as infile:
+        lines = infile.readlines()
+        last = lines[-1]
+        ulines = []
+        for line in lines:
+            if line.strip() is not "":
+                ulines.append(line.strip())
+            if line is "\n" or line is last: 
+                user_list.append(User(ulines))
+                uline = []
+
+    print user_list
+
     return user_list
     
 
