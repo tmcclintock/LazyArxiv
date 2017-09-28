@@ -19,6 +19,7 @@ def main():
 
     # For each user, generate a list of interesting articles
     for user in user_list:
+        print"######################################################"
         print user
         interesting = pf.match_keywords(user.kwlist, article_list)
         pf.print_all_articles(interesting)

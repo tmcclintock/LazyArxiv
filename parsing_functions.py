@@ -8,9 +8,9 @@ class Article():
 
     def __repr__(self):
         if len(self.authors) > 1:
-            return """%s\nAuthors: %s et al.\nAbstract: %s\n%s\n""" % (self.title, self.authors[0], self.abstract, self.link)
+            return """%s\nAuthors: %s et al.\nAbstract: %s\n%s\n""" % (self.title, self.authors, self.abstract, self.link)
         if len(self.authors) == 1:
-            return """%s\nAuthors: %s\nAbstract: %s\n%s\n""" % (self.title, self.authors[0], self.abstract, self.link)
+            return """%s\nAuthors: %s\nAbstract: %s\n%s\n""" % (self.title, self.authors, self.abstract, self.link)
 
 def load_title(entry):
     return entry.title.string
@@ -53,6 +53,9 @@ def check_authors(kw, authors):
             return True
     return False
 
+def remove_duplicates(articles):
+    return list(set(articles))
+
 def match_keywords(kwlist, article_list):
     interesting = []
     for article in article_list:
@@ -63,6 +66,9 @@ def match_keywords(kwlist, article_list):
                 interesting.append(article)
             elif check_authors(kw, article.authors):
                 interesting.append(article)
+
+    interesting = remove_duplicates(interesting)
+
     return interesting
 
 if __name__ == "__main__":
