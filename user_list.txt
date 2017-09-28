@@ -1,3 +1,7 @@
 Tom McClintock
 matthewkirby@email.arizona.edu
 "galaxy clusters" "weak lensing" "DES" "LSST" "DESI" "emulator" "F. Royer"
+
+Matthew Kirby
+matthewkirby@email.arizona.edu
+"LSST" "DESI" "emulator" "F. Royer"
