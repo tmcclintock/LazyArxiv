@@ -4,6 +4,7 @@ import parsing_functions as pf
 from bs4 import BeautifulSoup
 import datetime as dt
 import email_matches as email
+import sys
 
 def main():
     # Date range to search (last day)
@@ -29,8 +30,11 @@ def main():
         interesting = pf.match_keywords(user.kwlist, article_list)
         pf.print_all_articles(interesting)
 
-        email_output = pf.generate_email_output(interesting)
-        email.send_email(server, fromaddr, user.email, email_output)
+        if len(sys.argv) == 1:
+            print interesting
+        else:
+            email_output = pf.generate_email_output(interesting)
+            email.send_email(server, fromaddr, user.email, email_output)
 
     email.shutdown_email_server(server)
 
