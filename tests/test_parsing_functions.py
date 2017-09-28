@@ -5,7 +5,6 @@ import parsing_functions as pf
 from bs4 import BeautifulSoup
 import pytest
 
-
 def test_load_title():
     with open("test_call.txt") as fp:
         soup = BeautifulSoup(fp, 'xml')
