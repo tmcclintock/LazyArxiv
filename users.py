@@ -5,8 +5,6 @@ class User():
         self.lname = line[1]
         self.email = line[2]
         self.parse_keywords(line[3:])
-        #print "line", line[3:]
-        #print "Did it work?", self.kwlist
 
     def parse_keywords(self, kwlist):
         self.kwlist = []
@@ -31,7 +29,7 @@ class User():
 
 
     def __repr__(self):
-        return '%s %s\n%s\n%s\n' % (self.fname, self.lname, self.email, self.kwlist)
+        return '%s %s\n%s\nKeyWords: %s\n' % (self.fname, self.lname, self.email, self.kwlist)
 
 def load_all_users(fname="users.txt"):
     lines = [line.rstrip('\n') for line in open(fname)]

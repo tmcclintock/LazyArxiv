@@ -1,4 +1,5 @@
 import numpy as np
+import re
 from bs4 import BeautifulSoup
 
 class Article():
@@ -43,6 +44,26 @@ def print_all_articles(alist):
         print article
     return
 
+def find_word(kw):
+    return re.compile(r'\b({0})\b'.format(kw), flags=re.IGNORECASE).search
+
+def check_authors(kw, authors):
+    for auth in authors:
+        if kw == auth:
+            return True
+    return False
+
+def match_keywords(kwlist, article_list):
+    interesting = []
+    for article in article_list:
+        for kw in kwlist:
+            if find_word(kw)(article.title) is not None:
+                interesting.append(article)
+            elif find_word(kw)(article.abstract) is not None:
+                interesting.append(article)
+            elif check_authors(kw, article.authors):
+                interesting.append(article)
+    return interesting
 
 if __name__ == "__main__":
     with open("tests/test_call.txt") as fp:
