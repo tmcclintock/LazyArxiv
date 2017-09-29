@@ -1,5 +1,5 @@
 # LazyArxiv
-Too lazy to read abstracts? Use this tool.
+Too lazy to read the arxiv? Use this tool.
 
 Currently, users will be saved in a text file
 ```
