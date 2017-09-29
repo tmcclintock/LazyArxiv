@@ -1,6 +1,3 @@
-# The user list, since people should just use the default to edit
-user_list.txt
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
