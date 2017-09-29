@@ -10,3 +10,5 @@ Email
 By default you can change this in ```user_list.txt```.
 
 Your keywords are searched for amongst the **titles**, **abstracts**, and **author lists**.
+
+At the moment the only way to use this is by running ```python run_lazyarxiv.py```.
