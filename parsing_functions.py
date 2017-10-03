@@ -8,7 +8,7 @@ class Article():
 
     def __repr__(self):
         if len(self.authors) > 1: authors = [auth.encode('utf-8') for auth in self.authors]
-        else: authors = self.authors.encode('utf-8')
+        else: authors = self.authors[0].encode('utf-8')
         return """Title: %s\nAuthors: %s \nAbstract: %s\n%s\n""" % (self.title.encode('utf-8'), authors, self.abstract.encode('utf-8'), self.link.encode('utf-8'))
 
 def load_title(entry):
