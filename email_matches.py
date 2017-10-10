@@ -63,13 +63,3 @@ def shutdown_email_server(server):
 #	server.sendmail(fromaddr, toaddr, msg.as_string())
 #	server.quit()
 
-
-if __name__ == '__main__':
-    # Fill these in with the appropriate info...
-    usr='calvin.job.done'
-    psw='hobbesrules!'
-    fromaddr='calvin.job.done@gmail.com'
-    toaddr= 'matthewkirby@email.arizona.edu'
-
-    # Send notification email
-    noticeEMail(usr, psw, fromaddr, toaddr, 'testbody')
