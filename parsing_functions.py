@@ -9,7 +9,8 @@ class Article():
     def __repr__(self):
         if len(self.authors) > 1: authors = [auth.encode('utf-8') for auth in self.authors]
         else: authors = self.authors[0].encode('utf-8')
-        return """Title: %s\nAuthors: %s \nAbstract: %s\n%s\n""" % (self.title.encode('utf-8'), authors, self.abstract.encode('utf-8'), self.link.encode('utf-8'))
+        #return """Title: %s\nAuthors: %s \nAbstract: %s\n%s\n""" % (self.title.encode('utf-8'), authors, self.abstract.encode('utf-8'), self.link.encode('utf-8'))
+        return """%s\n%s\n\n""" % (self.title.encode('utf-8'), self.link.encode('utf-8'))
 
 def load_title(entry):
     return entry.title.string
@@ -75,7 +76,7 @@ def write_query(lastdate, currentdate):
     return query
 
 def generate_email_output(alist):
-    email_body = """"""
+    email_body = """""" + """Found %i articles\n\n""" % len(alist)
     for article in alist:
         email_body += article.__repr__()
     return email_body
